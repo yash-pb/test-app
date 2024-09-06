@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-})->middleware(['verify.shopify'])->name('home');
+})->middleware(['verify.shopify', 'billable'])->name('home');
 
 Route::get('/{vue_capture?}', function () {
     return view('welcome');

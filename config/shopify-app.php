@@ -381,6 +381,10 @@ return [
     */
 
     'webhooks' => [
+        [
+            'topic' => env('SHOPIFY_WEBHOOK_1_TOPIC', 'APP_UNINSTALLED'),
+            'address' => env('SHOPIFY_WEBHOOK_1_ADDRESS', 'https://(your-domain).com/webhook/app-uninstalled')
+        ],
         /*
             [
                 'topic' => env('SHOPIFY_WEBHOOK_1_TOPIC', 'ORDERS_CREATE'),
@@ -581,5 +585,5 @@ return [
     */
     'frontend_engine' => env('SHOPIFY_FRONTEND_ENGINE', 'BLADE'),
 
-    'iframe_ancestors' => '',
+    'iframe_ancestors' => 'https://stallion-inviting-gnu.ngrok-free.app',
 ];
